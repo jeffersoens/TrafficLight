@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,27 +14,26 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrafficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zNy-PP-Lpk">
-                                <rect key="frame" x="105" y="40" width="110" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zNy-PP-Lpk">
+                                <rect key="frame" x="110" y="99" width="210" height="210"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zNy-PP-Lpk" secondAttribute="height" multiplier="1:1" id="mew-8X-el1"/>
+                                </constraints>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pHd-1Q-v0O">
-                                <rect key="frame" x="105" y="180" width="110" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pHd-1Q-v0O">
+                                <rect key="frame" x="110" y="329" width="210" height="210"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                             </view>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bac-9P-X1L">
-                                <rect key="frame" x="105" y="320" width="110" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bac-9P-X1L">
+                                <rect key="frame" x="110" y="559" width="210" height="210"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="WJP-Dz-FSn">
-                                <rect key="frame" x="105" y="460" width="110" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="WJP-Dz-FSn">
+                                <rect key="frame" x="110" y="806" width="210" height="48"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -48,6 +47,25 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zNy-PP-Lpk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="E5O-wB-Sdk"/>
+                            <constraint firstItem="pHd-1Q-v0O" firstAttribute="top" secondItem="zNy-PP-Lpk" secondAttribute="bottom" constant="20" id="E7n-LI-hvw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="WJP-Dz-FSn" secondAttribute="bottom" constant="71" id="Fw8-i0-4My"/>
+                            <constraint firstItem="Bac-9P-X1L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="MBj-48-zpk"/>
+                            <constraint firstItem="zNy-PP-Lpk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Mzq-uE-qVq"/>
+                            <constraint firstItem="pHd-1Q-v0O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="Oim-5a-BqL"/>
+                            <constraint firstItem="WJP-Dz-FSn" firstAttribute="top" secondItem="Bac-9P-X1L" secondAttribute="bottom" constant="37" id="TiA-IJ-PPr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bac-9P-X1L" secondAttribute="trailing" constant="110" id="U9Q-U2-zTz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zNy-PP-Lpk" secondAttribute="trailing" constant="110" id="VPt-oI-CPU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WJP-Dz-FSn" secondAttribute="trailing" constant="110" id="ZwO-Fg-5yy"/>
+                            <constraint firstItem="pHd-1Q-v0O" firstAttribute="height" secondItem="Bac-9P-X1L" secondAttribute="height" id="dHS-0z-aBG"/>
+                            <constraint firstItem="zNy-PP-Lpk" firstAttribute="height" secondItem="pHd-1Q-v0O" secondAttribute="height" id="eHv-f4-Zd4"/>
+                            <constraint firstItem="Bac-9P-X1L" firstAttribute="top" secondItem="pHd-1Q-v0O" secondAttribute="bottom" constant="20" id="gq8-fs-Ef4"/>
+                            <constraint firstItem="pHd-1Q-v0O" firstAttribute="width" secondItem="Bac-9P-X1L" secondAttribute="width" id="i0N-ll-QTR"/>
+                            <constraint firstItem="zNy-PP-Lpk" firstAttribute="width" secondItem="pHd-1Q-v0O" secondAttribute="width" id="rWe-1k-0K5"/>
+                            <constraint firstItem="WJP-Dz-FSn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="tOl-Yf-ANc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pHd-1Q-v0O" secondAttribute="trailing" constant="110" id="y9g-Wq-CWQ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="greenLightView" destination="Bac-9P-X1L" id="Kuz-7f-etu"/>
@@ -58,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="3.1690140845070425"/>
+            <point key="canvasLocation" x="28.125" y="2.112676056338028"/>
         </scene>
     </scenes>
     <resources>
