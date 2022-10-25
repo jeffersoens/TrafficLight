@@ -7,30 +7,33 @@
 
 import UIKit
 
-var currentLightView: UIView?
-
 class ViewController: UIViewController {
     
     @IBOutlet var redLightView: UIView!
-    
     @IBOutlet var yellowLightView: UIView!
-    
     @IBOutlet var greenLightView: UIView!
     
     @IBOutlet var toggleButton: UIButton!
+    
+    private var currentLightView: UIView?
+    
+    private let lightIsOff: CGFloat = 0.3
+    private let lightIsOn: CGFloat = 1
         
     override func viewDidLoad() {
         super.viewDidLoad()
-                        
+                
+        redLightView.alpha = lightIsOff
+        yellowLightView.alpha = lightIsOff
+        greenLightView.alpha = lightIsOff
+        
+        toggleButton.layer.cornerRadius = 15
+    }
+    
+    override func viewWillLayoutSubviews() {
         redLightView.layer.cornerRadius = 0.5 * redLightView.bounds.height
         yellowLightView.layer.cornerRadius = 0.5 * yellowLightView.bounds.height
         greenLightView.layer.cornerRadius = 0.5 * greenLightView.bounds.height
-        
-        redLightView.alpha = 0.35
-        yellowLightView.alpha = 0.35
-        greenLightView.alpha = 0.35
-        
-        toggleButton.layer.cornerRadius = 15
     }
         
     @IBAction func toggleLights() {
@@ -42,19 +45,16 @@ class ViewController: UIViewController {
         
         switch currentLightView {
         case yellowLightView:
-            redLightView.alpha = 0.35;
-            yellowLightView.alpha = 1;
-            greenLightView.alpha = 0.35;
+            redLightView.alpha = lightIsOff;
+            yellowLightView.alpha = lightIsOn;
             currentLightView = greenLightView
         case greenLightView:
-            redLightView.alpha = 0.35;
-            yellowLightView.alpha = 0.35;
-            greenLightView.alpha = 1;
+            yellowLightView.alpha = lightIsOff;
+            greenLightView.alpha = lightIsOn;
             currentLightView = redLightView
         default:
-            redLightView.alpha = 1;
-            yellowLightView.alpha = 0.35;
-            greenLightView.alpha = 0.35;
+            greenLightView.alpha = lightIsOff
+            redLightView.alpha = lightIsOn;
             currentLightView = yellowLightView
         }
     }
